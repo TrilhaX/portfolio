@@ -67,7 +67,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     text-align: center;
-    top: -161%;
+    top: -150%;
     left: 87%;
 }
 
@@ -76,7 +76,7 @@ body {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         text-align: center;
-        top: -160%;
+        top: -149%;
         left: 100%;
 }
 
@@ -86,9 +86,9 @@ a {
 }
 
 #logo {
-    position: fixed;
-    top: -10px; /* Alterado de -180% para -180px */
-    left: 5px; /* Alterado de -50% para -50px */
+    position: absolute;
+    top: -160%; /* Alterado de -180% para -180px */
+    left: -32%; /* Alterado de -50% para -50px */
     width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
     height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
 }
