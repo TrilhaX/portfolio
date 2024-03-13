@@ -9,6 +9,7 @@ body {
     top: 16%;
     left: 40%;
     font-size: 23px;
+    flex-wrap: wrap;
 }
 
 .meioap {
@@ -19,6 +20,8 @@ body {
     left: 38%;
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .fimap {
@@ -29,12 +32,16 @@ body {
     left: 39.5%;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #githubimg {
     top: -330%;
     left: 227%;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sobremim {
@@ -49,8 +56,21 @@ body {
     top: 75%;
     height: 28%;
     width: 50%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.sobremimt {
+    text-align: center;
+    position: absolute;
+    padding: 3%;
+    color: rgb(248, 248, 248);
+    font-size: 35px;
+    top: -10%;
+    left: 31.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .sobremimtxt {
     text-align: center;
@@ -58,8 +78,10 @@ body {
     padding: 3%;
     color: rgb(248, 248, 248);
     font-size: 35px;
-    top: -17%;
+    top: 25%;
     left: 0%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .inicio a{
@@ -69,6 +91,8 @@ body {
     text-align: center;
     top: -150%;
     left: 84%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .projetos a {
@@ -78,6 +102,8 @@ body {
         text-align: center;
         top: -149%;
         left: 97%;
+        display: flex;
+        flex-wrap: wrap;
 }
 
 a {
@@ -91,6 +117,8 @@ a {
     left: -32%; /* Alterado de -50% para -50px */
     width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
     height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #alongamento {
@@ -99,4 +127,140 @@ a {
     color: rgba(255, 255, 255, 0);
     top: 124%;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 600px) {
+    .inicioap {
+        color: blueviolet;
+        text-align: center;
+        position: absolute;
+        top: 77%;
+        left: 55%;
+        font-size: 23px;
+        flex-wrap: wrap;
+        width: 115%;
+    }
+    
+    .meioap {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .fimap {
+        color: blueviolet;
+        text-align: center;
+        position: absolute;
+        top: 92%;
+        left: 55%;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-wrap: wrap;
+        width: 120%;
+    }
+    
+    #githubimg {
+        top: -1050%;
+        left: 70.5%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sobremim {
+        text-align: center;
+        position: absolute;
+        padding: 5%;
+        border-radius: 10px;
+        border: 10px solid; 
+        background-color: gray;
+        color: gray;
+        left: 30%;
+        top: 170%;
+        height: 80%;
+        width: 150%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sobremimt {
+        text-align: center;
+        position: absolute;
+        padding: 3%;
+        color: rgb(248, 248, 248);
+        font-size: 35px;
+        top: -10%;
+        left: 17%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sobremimtxt {
+        text-align: center;
+        position: absolute;
+        padding: 3%;
+        color: rgb(248, 248, 248);
+        font-size: 35px;
+        top: 15%;
+        left: 0%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .inicio a{
+        font-size: 45px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        text-align: center;
+        top: -200%;
+        left: 20%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .projetos a {
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            text-align: center;
+            top: -199.7%;
+            left: 50%;
+            display: flex;
+            flex-wrap: wrap;
+    }
+    
+    a {
+        text-decoration: none;
+        color: blueviolet;
+    }
+    
+    #logo {
+        position: absolute;
+        top: -205%; /* Alterado de -180% para -180px */
+        left: -32%; /* Alterado de -50% para -50px */
+        width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
+        height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #alongamento {
+        border: 10px solid;
+        background-color: rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 0);
+        top: 124%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+  
