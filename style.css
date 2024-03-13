@@ -169,7 +169,7 @@ a {
     }
     
     #githubimg {
-        top: -1050%;
+        top: -1000%;
         left: 70.5%;
         position: absolute;
         display: flex;
@@ -184,7 +184,7 @@ a {
         border: 10px solid; 
         background-color: gray;
         color: gray;
-        left: 30%;
+        left: 20%;
         top: 170%;
         height: 80%;
         width: 150%;
@@ -200,6 +200,7 @@ a {
         font-size: 35px;
         top: -10%;
         left: 17%;
+        height: 105%;
         display: flex;
         flex-wrap: wrap;
     }
@@ -246,7 +247,7 @@ a {
     #logo {
         position: absolute;
         top: -205%; /* Alterado de -180% para -180px */
-        left: -32%; /* Alterado de -50% para -50px */
+        left: -30%; /* Alterado de -50% para -50px */
         width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
         height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
         display: flex;
