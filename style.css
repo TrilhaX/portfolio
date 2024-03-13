@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    color: black;
+    height: 90%;
+}
+
+#Titulo {
+    color: purple;
+    font-size: 32px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    left: 37%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+}
+
+.emb {
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border: 600px solid;
+    border-radius: 0%;
+    top: 50%;
+    left: 0%;
+    position: absolute;
+    height: -100%;
+    width: 11%;
+}
+
+.sobremim {
+    color: gray;
+    background-color: gray;
+    border: 200px solid;
+    border-radius: 1%;
+    top: 150%;
+    left: 10%;
+    position: absolute;
+    width: 50%;
+    max-height: -50%;
+    height: 10%;
+}
+
+#tsm {
+    color: purple;
+    font-size: 28px;
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    left: 3%;
+    top: -300%;
+    height: 0%;
+}
+
+#xsm {
+    top: 0%;
+    left: -25%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    width: 150%;
+}
+
+.ec{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    border: 30px solid;
+    border-radius: 0%;
+    position: absolute;
+    top: -1%;
+    width: 100%;
+    left: -4.47%;
+}
+
+.mid a{
+    color: purple;
+    top: 0%;
+    left: 92%;
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+}
+
+a {
+    text-decoration: purple;
+    color: purple;
+}
