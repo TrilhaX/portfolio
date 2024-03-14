@@ -133,6 +133,12 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+
+    Body {
+        background-color: black;
+        zoom: 0%;
+    }
+
     .inicioap {
         color: blueviolet;
         text-align: center;
