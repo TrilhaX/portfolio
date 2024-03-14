@@ -41,8 +41,8 @@ window.onload = function() {
         document.getElementById("githubimg").style.left = "250%";
         document.getElementById("githubimg").style.top = "-330%";
         document.getElementById("logo").style.top = "-157%";
-        document.getElementById("inicio").style.top = "-175%";
-        document.getElementById("projetos").style.top = "-174.3%";
+        document.getElementById("inicio").style.top = "-150%";
+        document.getElementById("projetos").style.top = "-150.3%";
         for (var i = 0; i < fimap.length; i++){
             fimap[i].style.top = "28%";
         }
