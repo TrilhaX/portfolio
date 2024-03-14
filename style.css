@@ -5,7 +5,6 @@ body {
 
 #logo {
     position: absolute;
-    top: -157%; /* Alterado de -180% para -180px */
     left: -32%; /* Alterado de -50% para -50px */
     width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
     height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
