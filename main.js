@@ -5,7 +5,7 @@ window.onload = function() {
     var sobremim = document.getElementsByClassName("sobremim");
     var inicioap = document.getElementsByClassName("inicioap");
 
-    if (screenWidth < 600) {
+    if (screenWidth < 1) {
         document.getElementById("githubimg").style.left = "290%"
         document.getElementById("githubimg").style.top = "-370%"
         document.getElementById("logo").style.top = "-213%"
@@ -21,7 +21,7 @@ window.onload = function() {
             inicioap[i].style.top = "17%"
         }
         zoomLevel = 50; // Zoom de 50% para telas menores que 600 pixels de largura
-    } else if (screenWidth >= 600 && screenWidth < 800) {
+    } else if (screenWidth >= 1 && screenWidth < 200) {
         document.getElementById("githubimg").style.left = "270%"
         document.getElementById("githubimg").style.top = "-350%"
         document.getElementById("logo").style.top = "-185%"
@@ -37,7 +37,7 @@ window.onload = function() {
             inicioap[i].style.top = "16.5%"
         }
         zoomLevel = 67; // Zoom de 67% para telas entre 600 e 799 pixels de largura
-    } else if (screenWidth >= 800 && screenWidth < 1200) {
+    } else if (screenWidth >= 200 && screenWidth < 600) {
         document.getElementById("githubimg").style.left = "250%"
         document.getElementById("githubimg").style.top = "-330%"
         document.getElementById("logo").style.top = "-157%"
