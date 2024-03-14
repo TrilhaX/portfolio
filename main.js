@@ -37,7 +37,7 @@ window.onload = function() {
             inicioap[i].style.top = "16.5%"
         }
         zoomLevel = 67; // Zoom de 67% para telas entre 600 e 799 pixels de largura
-    } else if (screenWidth >= 200 && screenWidth < 800) {
+    } else if (screenWidth >= 200 && screenWidth < 1200) {
         document.getElementById("githubimg").style.left = "250%"
         document.getElementById("githubimg").style.top = "-330%"
         document.getElementById("logo").style.top = "-157%"
