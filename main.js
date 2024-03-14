@@ -53,8 +53,7 @@ window.onload = function() {
             inicioap[i].style.top = "16%";
         }
         zoomLevel = 100; // Zoom de 100% para telas entre 800 e 1199 pixels de largura
-    }
-        } else {
+    } else {
         document.getElementById("githubimg").style.left = "230%";
         document.getElementById("githubimg").style.top = "-310%";
         document.getElementById("logo").style.top = "-129%";
@@ -69,7 +68,7 @@ window.onload = function() {
         for (var i = 0; i < inicioap.length; i++){
             inicioap[i].style.top = "15.5%";
         }
-        zoomLevel = 150; // Zoom de 150% para telas maiores ou iguais a 1200 pixels de largura
+        zoomLevel = 100; // Não deve haver zoom de 150%
     }
 
     document.body.style.zoom = zoomLevel + "%";
