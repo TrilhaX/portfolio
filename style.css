@@ -37,6 +37,7 @@ body {
 
 #githubimg {
     top: -330%;
+    left: 250%;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
