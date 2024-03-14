@@ -1,5 +1,46 @@
 body {
     background-color: black;
+    zoom: 67%;
+}
+
+#logo {
+    position: absolute;
+    top: -157%; /* Alterado de -180% para -180px */
+    left: -32%; /* Alterado de -50% para -50px */
+    width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
+    height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inicio a{
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    top: -150%;
+    left: 93%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projetos a {
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        text-align: center;
+        top: -149%;
+        left: 105%;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+#githubimg {
+    top: -330%;
+    left: 250%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .inicioap {
@@ -32,14 +73,6 @@ body {
     left: 39.5%;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#githubimg {
-    top: -330%;
-    left: 227%;
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
 }
@@ -84,41 +117,9 @@ body {
     flex-wrap: wrap;
 }
 
-.inicio a{
-    font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    text-align: center;
-    top: -150%;
-    left: 84%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.projetos a {
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        text-align: center;
-        top: -149%;
-        left: 97%;
-        display: flex;
-        flex-wrap: wrap;
-}
-
 a {
     text-decoration: none;
     color: blueviolet;
-}
-
-#logo {
-    position: absolute;
-    top: -160%; /* Alterado de -180% para -180px */
-    left: -32%; /* Alterado de -50% para -50px */
-    width: 10%; /* Você pode definir uma largura fixa em pixels se preferir */
-    height: 10%; /* Você pode definir uma altura fixa em pixels se preferir */
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #alongamento {
