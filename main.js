@@ -53,8 +53,7 @@ window.onload = function() {
             inicioap[i].style.top = "16%";
         }
         zoomLevel = 100; // Zoom de 100% para telas entre 800 e 1199 pixels de largura
-    }
-        } else {
+    } else {
         document.getElementById("githubimg").style.left = "230%";
         document.getElementById("githubimg").style.top = "-310%";
         document.getElementById("logo").style.top = "-129%";
