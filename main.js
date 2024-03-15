@@ -22,13 +22,13 @@ window.onload = function() {
         }
         zoomLevel = 50; // Zoom de 50% para telas menores que 600 pixels de largura
     } else if (screenWidth >= 600 && screenWidth > 800) {
-        document.getElementById("githubimg").style.left = "270%"
-        document.getElementById("githubimg").style.top = "-350%"
-        document.getElementById("logo").style.top = "-185%"
-        document.getElementById("inicio").style.top = "-177%"
-        document.getElementById("projetos").style.top = "-176%"
+        document.getElementById("githubimg").style.left = "253.5%"
+        document.getElementById("githubimg").style.top = "-300%"
+        document.getElementById("logo").style.top = "-178%"
+        document.getElementById("inicio").style.top = "-170%"
+        document.getElementById("projetos").style.top = "-169%"
         for (var i = 0; i < fimap.length; i++){
-            fimap[i].style.top = "26%"
+            fimap[i].style.top = "27%"
         }
         for (var i = 0; i < sobremim.length; i++){
             sobremim[i].style.height = "22%"
