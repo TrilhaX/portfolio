@@ -32,10 +32,17 @@ header a {
 }
 
 .section {
-    border-bottom: 2px solid;
     color: black;
     background-color: black;
-    height: 30vh;
+    height: 60vh;
+    border-bottom: 2px solid;
     display: flex;
     padding: 50px 0 0 480px;
+}
+
+.direita img {
+    width: 352px;
+    position: absolute;
+    left: 35.6%;
+    top: 35%;
 }
