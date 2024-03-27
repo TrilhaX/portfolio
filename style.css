@@ -1,39 +1,41 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
     background-color: black;
 }
 
-.logo {
-    color: blueviolet;
-    font-size: 20px;
-    position: absolute;
-    top: 1%;
+header ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.Home{
-    color: blueviolet;
-    font-size: 25px;
-    position: absolute;
-    top: 5%;
-    left: 75%;
-}
-
-.sobre{
-    color: blueviolet;
-    font-size: 25px;
-    position: absolute;
-    top: 5%;
-    left: 83%;
-}
-
-.projetos {
-    color: blueviolet;
-    font-size: 25px;
-    position: absolute;
-    top: 5%;
-    left: 90%;
-}
-
-a {
+header a {
+    color: white;
     text-decoration: none;
-    color: blueviolet;
+}
+
+.logo {
+    color: white;
+}
+
+.esquerda {
+    color: white;
+    text-align: center;
+}
+
+.section {
+    border-bottom: 2px solid;
+    color: black;
+    background-color: black;
+    height: 30vh;
+    display: flex;
+    padding: 50px 0 0 480px;
 }
