@@ -37,8 +37,8 @@ a {
     color: white;
 }
 
-.esquerda {
-    padding: 120px 40px 0 25px;
+.esquerdaTXT {
+    padding: 120px 200px 0 123px;
     color: black;
     text-align: center;
 }
@@ -48,18 +48,18 @@ a {
     border-bottom: 10px solid;
     display: flex;
     padding: 140px 60px;
-    color: white;
+    color: black;
 }
 
-.direita img {
-    padding: 0 0 0 100px;
+.direitaEu img {
+    padding: 0 0 0 0;
     height: 60vh;
     width: 25vw;
     box-shadow: 100px 20px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
-.direita, .esquerda {
+.direitaEu, .esquerdaTXT {
     width: 50vw;
 }
 
@@ -69,4 +69,38 @@ a {
     color: black;
     padding: 70px;
     background-color: gray;
+}
+
+#Projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.esquerda {
+    width: 30%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 20px 0 100px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.esquerda img{
+    width: 20vw;
+    height: 20vw;
+    align-items: left;
+    padding: 20px 0 0 0;
+}
+
+.esquerda h2{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.esquerda p{
+    text-align: center;
+    padding: 20px 0 0 0;
 }
