@@ -29,8 +29,8 @@ header ul {
 }
 
 a {
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
 .logo {
@@ -63,7 +63,7 @@ a {
     width: 50vw;
 }
 
-.meio {
+.meioSM {
     text-align: center;
     width: 100%;
     color: black;
@@ -101,6 +101,62 @@ a {
 }
 
 .esquerda p{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.meio {
+    width: 30%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 20px 0 100px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.meio img{
+    width: 20vw;
+    height: 20vw;
+    align-items: left;
+    padding: 20px 0 0 0;
+}
+
+.meio h2{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.meio p{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.direita {
+    width: 30%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 20px 0 100px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.direita img{
+    width: 20vw;
+    height: 20vw;
+    align-items: left;
+    padding: 20px 0 0 0;
+}
+
+.direita h2{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.direita p{
     text-align: center;
     padding: 20px 0 0 0;
 }
