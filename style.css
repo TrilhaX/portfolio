@@ -22,6 +22,7 @@ header {
     top: 0;
     left: 0;
     padding: 0 1rem;
+    z-index: 10;
 }
 
 header h1 {
@@ -30,7 +31,7 @@ header h1 {
 
 nav ul {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
     flex-wrap: wrap;
     padding-right: 1.5rem;
@@ -47,7 +48,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #555;
 }
-
 
 button {
     background: none;
@@ -73,6 +73,7 @@ footer {
     justify-content: center;
     padding: .5rem 0;
     text-align: center;
+    z-index: 10;
 }
 
 main {
@@ -83,8 +84,12 @@ main {
     padding-top: 12vh;
 }
 
+h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
 section {
-    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -93,37 +98,119 @@ section {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: blue;
+}
+
 .social-media {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.5rem;
+    align-items: center;
 }
 
 .social-media a img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .social-media a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.apresentacao{
+.apresentacao {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+.idiomas {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linguagens, #ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.linguagens img, #ferramentas img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.linguagens div, #ferramentas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.linguagens div:hover, #ferramentas div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
 #firstSection {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    gap: 30rem;
-    height: 70vh;
-    padding-bottom: 35rem;
-    padding-top: 20rem;
+    gap: 2rem;
+    min-height: 70vh;
+    padding: 5rem 1rem 5rem 1rem;
 }
 
 #firstSection img {
@@ -131,27 +218,26 @@ section {
     max-width: 30rem;
     border: none;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #firstSection img:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 50px rgba(255, 255, 255, 5);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
 }
 
-#firstSection h1{
+#firstSection h1 {
     font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-size: 3rem;
 }
 
-#firstSection p{
+#firstSection p {
     font-family: "Playwrite HU", cursive;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
-#secondSection{
+#secondSection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,34 +246,90 @@ section {
 }
 
 #secondSection img {
-    border: white solid 1px;
+    border: 1px solid white;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #secondSection img:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 50px rgba(255, 255, 255, 5);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
 }
 
-#secondSection h1{
+#secondSection h1 {
     font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-size: 3rem;
     padding-bottom: 2rem;
 }
 
-#secondSection p{
+#secondSection p {
     font-family: "Playwrite HU", cursive;
-    font-optical-sizing: auto;
     font-style: normal;
     padding-top: 1.5rem;
 }
 
+/* Seção Idiomas */
+#thirdSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
 #thirdSection h1 {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 2.5rem;
+    font-style: normal;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+#portugues, #ingles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#portugues img:hover {
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.7);
+    transform: scale(1.1);
+}
+
+#ingles img:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.7);
+    transform: scale(1.1);
+}
+
+#fourthSection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 50vh;
+}
+
+#fourthSection h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+#fifthSection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+#fifthSection h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+    font-size: 3rem;
+    padding-bottom: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -196,10 +338,43 @@ section {
         height: auto;
         padding: 1rem 0;
     }
-
+    
     nav ul {
         flex-direction: column;
         align-items: center;
         padding-top: 0.5rem;
+    }
+    
+    #firstSection {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 3rem 1rem;
+    }
+    
+    header h1,
+    #firstSection h1,
+    #secondSection h1,
+    #thirdSection h1,
+    #fourthSection h1,
+    #fifthSection h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .social-media a img {
+        width: 20px;
+        height: 20px;
+    }
+    .idiomas {
+        gap: 1rem;
     }
 }
