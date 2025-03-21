@@ -207,7 +207,7 @@ a {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 20rem;
     min-height: 70vh;
     padding: 5rem 1rem 5rem 1rem;
 }
@@ -338,11 +338,17 @@ a {
     padding-bottom: 5rem;
 }
 
-#fifthSection h1, p {
+#fifthSection h1 {
     font-family: "Josefin Sans", sans-serif;
     font-style: normal;
     font-size: 3rem;
     padding-bottom: 3rem;
+}
+
+#fifthSection p {
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
