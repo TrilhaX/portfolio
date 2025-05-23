@@ -1,0 +1,657 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #E9E9E9;
+  --footer-bg: #E9E9E9;
+  --card-bg: #f5f5f5;
+  --card-text: #222;
+  --link-color: blue;
+  --hover-color: #555;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
+  --card-bg: #222;
+  --card-text: #ddd;
+  --link-color: #8ab4f8;
+  --hover-color: #bbb;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+header {
+  background-color: #E9E9E9;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  padding-right: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+button:hover, button:focus {
+  color: #555;
+}
+
+footer {
+  background-color: #E9E9E9;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+  text-align: center;
+  z-index: 10;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12vh;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+input:checked + .slider {
+  background-color: var(--link-color);
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.theme-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-icon {
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--hover-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: var(--bg-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.social-media a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social-media a img:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apresentacao {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.idiomas {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.linguagens, #ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.linguagens img, #ferramentas img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.linguagens div, #ferramentas div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.linguagens div:hover, #ferramentas div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+#firstSection {
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 15rem;
+  min-height: 70vh;
+  padding: 5rem 1rem 5rem 1rem;
+}
+
+#firstSection img {
+  width: 100%;
+  max-width: 30rem;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#firstSection img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
+}
+
+#firstSection h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+#firstSection p {
+  font-family: "Playwrite HU", cursive;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+#secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+#secondSection img {
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#secondSection img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
+}
+
+#secondSection h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#secondSection p {
+  font-family: "Playwrite HU", cursive;
+  font-style: normal;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+}
+
+#thirdSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+#thirdSection h1{
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+#thirdSection p{
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+}
+
+#portugues, #ingles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.5s ease, box-shadow 0.3s ease, gap 0.3s ease; 
+}
+
+#portugues img, #ingles img {
+  transition: transform 0.5s ease, box-shadow 0.3s ease; 
+}
+
+#portugues img:hover {
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.7);
+  transform: scale(1.1);
+}
+
+#ingles img:hover{
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.7);
+  transform: scale(1.1);
+}
+
+#ingles:hover, #portugues:hover{
+  gap: 2rem;
+  transform: scale(1.1);
+}
+
+#fourthSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 50vh;
+}
+
+#fourthSection h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+#fourthSection p {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+#fifthSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 5rem;
+}
+
+#fifthSection h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+#fifthSection p {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  main{
+    overflow-x: hidden;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1{
+    font-size: 12px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+  }
+  #curriculoVitae{
+    width: 25rem;
+    height: 25rem;
+  }
+  #firstSection {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+  }
+  
+  #firstSection h1,
+  #secondSection h1,
+  #thirdSection h1,
+  #fourthSection h1,
+  #fifthSection h1 {
+      font-size: 2rem;
+  }
+  
+  .card {
+      width: 90%;
+  }
+  nav ul li a{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  main{
+    overflow-x: hidden;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1{
+    font-size: 10px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+  }
+  #curriculoVitae{
+    width: 25rem;
+    height: 25rem;
+  }
+  #firstSection {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+  }
+  
+  #firstSection h1,
+  #secondSection h1,
+  #thirdSection h1,
+  #fourthSection h1,
+  #fifthSection h1 {
+      font-size: 2rem;
+  }
+  
+  .card {
+      width: 90%;
+  }
+  nav ul li a{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  main{
+    overflow-x: hidden;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1{
+    font-size: 8px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+  }
+  #curriculoVitae{
+    width: 25rem;
+    height: 25rem;
+  }
+  #firstSection {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+  }
+  
+  #firstSection h1,
+  #secondSection h1,
+  #thirdSection h1,
+  #fourthSection h1,
+  #fifthSection h1 {
+      font-size: 1.5rem;
+  }
+  
+  #firstSection p,
+  #secondSection p,
+  #thirdSection p,
+  #fourthSection p,
+  #fifthSection p {
+      font-size: 0.7rem;
+  }
+  
+
+  .card {
+      width: 90%;
+  }
+  nav ul li a{
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  main{
+    overflow-x: hidden;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1{
+    font-size: 6px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+  }
+  #curriculoVitae{
+    width: 25rem;
+    height: 25rem;
+  }
+  #firstSection {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+  }
+  
+  #firstSection h1,
+  #secondSection h1,
+  #thirdSection h1,
+  #fourthSection h1,
+  #fifthSection h1 {
+      font-size: 1.5rem;
+  }
+  
+  #firstSection p,
+  #secondSection p,
+  #thirdSection p,
+  #fourthSection p,
+  #fifthSection p {
+      font-size: 0.7rem;
+  }
+  
+
+  .card {
+      width: 90%;
+  }
+  nav ul li a{
+    font-size: 6px;
+  }
+}
