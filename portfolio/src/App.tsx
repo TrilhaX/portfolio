@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css'
 import Home from './components/home'
+import Skills from './components/skills';
+import Projetos from './components/projects';
 
-function App() {
-
+function App(): JSX.Element {
   function handleThemeChange(): void {
     const html = document.documentElement;
-    const isDark = html.classList.toggle('dark');
+    const isDark = html.classList.toggle("dark");
 
     const applyFilter = (selector: string, filter: string): void => {
       document.querySelectorAll<HTMLElement>(selector).forEach((el) => {
@@ -15,38 +16,33 @@ function App() {
     };
 
     if (isDark) {
-      html.style.filter = 'invert(1) hue-rotate(180deg)';
-      applyFilter('img, video, svg, .slider-emoji-light, .slider-emoji-dark', 'invert(1) hue-rotate(180deg)');
-      applyFilter('.slider', 'invert(0) hue-rotate(0deg)');
+      html.style.filter = "invert(1) hue-rotate(180deg)";
+      applyFilter(
+        "img, video, svg, .slider-emoji-light, .slider-emoji-afternoon, .slider-emoji-dark",
+        "invert(1) hue-rotate(180deg)"
+      );
+      applyFilter(".slider", "invert(0) hue-rotate(0deg)");
     } else {
-      html.style.filter = 'invert(0) hue-rotate(0deg)';
-      applyFilter('img, video, svg, .slider-emoji-light, .slider-emoji-dark', 'invert(0) hue-rotate(0deg)');
-      applyFilter('.slider', 'invert(0) hue-rotate(0deg)');
+      html.style.filter = "invert(0) hue-rotate(0deg)";
+      applyFilter(
+        "img, video, svg, .slider-emoji-light, .slider-emoji-afternoon, .slider-emoji-dark",
+        "invert(0) hue-rotate(0deg)"
+      );
+      applyFilter(".slider", "invert(0) hue-rotate(0deg)");
     }
 
-    localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+    localStorage.setItem("darkMode", isDark ? "true" : "false");
   }
 
   return (
-    <>
+    <div className='content'>
       <header>
         <nav>
-          <h4>
-            João Vitor Trilha Richartz
-          </h4>
+          <h4>João Vitor Trilha Richartz</h4>
           <ul>
-            <li className='Home'>
-              <a href="#">Home</a>
-            </li>
-            <li className='About'>
-              <a href="#">About</a>
-            </li>
-            <li className='Skills'>
-              <a href="#">Skills</a>
-            </li>
-            <li className="Projects">
-              <a href="#">Projects</a>
-            </li>
+            <li className='Home'><a href="#home">Home</a></li>
+            <li className='Skills'><a href="#skills">Skills</a></li>
+            <li className="Projects"><a href="#fifthSection">Projects</a></li>
             <label className="switch">
               <label className="slider-emoji-light">☀️</label>
               <input type="checkbox" onClick={handleThemeChange} />
@@ -57,8 +53,10 @@ function App() {
         </nav>
       </header>
       <Home />
-    </>
-  )
+      <Skills />
+      <Projetos />
+    </div>
+  );
 }
 
-export default App
+export default App;
