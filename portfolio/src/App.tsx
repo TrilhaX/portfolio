@@ -1,47 +1,22 @@
-import React from 'react';
 import './App.css'
 import Home from './components/home'
 import Skills from './components/skills';
 import Projetos from './components/projects';
+import linkedinImg from './assets/linkedin.png';
+import githubImg from './assets/githublogo.png';
+import instagramImg from './assets/instagramlogo.png';
+import { handleThemeChange, TiltImage } from './components/Functions';
 
-function App(): JSX.Element {
-  function handleThemeChange(): void {
-    const html = document.documentElement;
-    const isDark = html.classList.toggle("dark");
-
-    const applyFilter = (selector: string, filter: string): void => {
-      document.querySelectorAll<HTMLElement>(selector).forEach((el) => {
-        el.style.filter = filter;
-      });
-    };
-
-    if (isDark) {
-      html.style.filter = "invert(1) hue-rotate(180deg)";
-      applyFilter(
-        "img, video, svg, .slider-emoji-light, .slider-emoji-afternoon, .slider-emoji-dark",
-        "invert(1) hue-rotate(180deg)"
-      );
-      applyFilter(".slider", "invert(0) hue-rotate(0deg)");
-    } else {
-      html.style.filter = "invert(0) hue-rotate(0deg)";
-      applyFilter(
-        "img, video, svg, .slider-emoji-light, .slider-emoji-afternoon, .slider-emoji-dark",
-        "invert(0) hue-rotate(0deg)"
-      );
-      applyFilter(".slider", "invert(0) hue-rotate(0deg)");
-    }
-
-    localStorage.setItem("darkMode", isDark ? "true" : "false");
-  }
-
+function App() {
   return (
-    <div className='content'>
+    <div className='content'>:JSX.Element
       <header>
         <nav>
           <h4>João Vitor Trilha Richartz</h4>
           <ul>
             <li className='Home'><a href="#home">Home</a></li>
-            <li className='Skills'><a href="#skills">Skills</a></li>
+            <li className='Skills'><a href="#thirdSection">Languages</a></li>
+            <li className='Skills'><a href="#fourthSection">Skills</a></li>
             <li className="Projects"><a href="#fifthSection">Projects</a></li>
             <label className="switch">
               <label className="slider-emoji-light">☀️</label>
@@ -52,9 +27,25 @@ function App(): JSX.Element {
           </ul>
         </nav>
       </header>
-      <Home />
-      <Skills />
-      <Projetos />
+      <main>
+        <Home />
+        <Skills />
+        <Projetos />
+      </main>
+      <footer>
+        <div className="social-media">
+          <a href="https://www.linkedin.com/in/joao-vitor-trilha-richartz-023257348/" aria-label="LinkedIn" target="_blank">
+            <TiltImage src={linkedinImg} alt="LinkedIn" style={{ width: '30px', height: '30px' }} />
+          </a>
+          <a href="https://github.com/TrilhaX" aria-label="GitHub" target="_blank">
+            <TiltImage src={githubImg} alt="GitHub" style={{ width: '30px', height: '30px' }} />
+          </a>
+          <a href="https://www.instagram.com/trilha.jv/" aria-label="Instagram" target="_blank">
+            <TiltImage src={instagramImg} alt="Instagram" style={{ width: '30px', height: '30px' }} />
+          </a>
+          <h2>joaotrilha01@gmail.com</h2>
+        </div>
+      </footer>
     </div>
   );
 }
