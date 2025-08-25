@@ -38,10 +38,10 @@ function Projetos() {
                 {images.map(({ id, src, alt, css, title, description }) => {
                     return (
                         <div className="card" key={id}>
+                            <h2>{title}</h2>
                             <a href="https://github.com/TrilhaX/pokedex" target="_blank" rel="noreferrer">
                                 <TiltImage src={src} alt={alt} style={{ width: css[0], borderRadius: css[1] }} />
                             </a>
-                            <h2>{title}</h2>
                             <p>
                                 {description}
                             </p>

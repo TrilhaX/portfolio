@@ -38,7 +38,12 @@ function App() {
             <TiltImage src={linkedinImg} alt="LinkedIn" style={{ width: '30px', height: '30px' }} />
           </a>
           <a href="https://github.com/TrilhaX" aria-label="GitHub" target="_blank">
-            <TiltImage src={githubImg} alt="GitHub" style={{ width: '30px', height: '30px' }} />
+            <TiltImage
+              src={githubImg}
+              alt="GitHub"
+              style={{ width: '30px', height: '30px' }}
+              id="github-icon"
+            />
           </a>
           <a href="https://www.instagram.com/trilha.jv/" aria-label="Instagram" target="_blank">
             <TiltImage src={instagramImg} alt="Instagram" style={{ width: '30px', height: '30px' }} />

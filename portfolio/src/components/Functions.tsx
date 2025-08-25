@@ -1,4 +1,3 @@
-// TiltImage.tsx
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 
@@ -6,9 +5,10 @@ export type TiltImageProps = {
     src: string;
     alt: string;
     style?: React.CSSProperties;
+    id?: string;
 };
 
-export function TiltImage({ src, alt, style }: TiltImageProps) {
+export function TiltImage({ src, alt, style, id }: TiltImageProps) {
     const tiltRef = useRef<HTMLImageElement | null>(null);
 
     useEffect(() => {
@@ -33,6 +33,7 @@ export function TiltImage({ src, alt, style }: TiltImageProps) {
             ref={tiltRef}
             src={src}
             alt={alt}
+            id={id}
             className="w-72 rounded-2xl shadow-xl shadow-black dark:shadow-white transition-all duration-300"
             style={style}
         />
@@ -45,7 +46,11 @@ export function handleThemeChange(): void {
 
     const applyFilter = (selector: string, filter: string): void => {
         document.querySelectorAll<HTMLElement>(selector).forEach((el) => {
-            el.style.filter = filter;
+            if (el.id === "github-icon") {
+                return;
+            } else {
+                el.style.filter = filter;
+            }
         });
     };
 
