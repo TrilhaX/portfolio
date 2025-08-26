@@ -36,6 +36,7 @@ export function TiltImage({ src, alt, style, id }: TiltImageProps) {
             id={id}
             className="w-72 rounded-2xl shadow-xl shadow-black dark:shadow-white transition-all duration-300"
             style={style}
+            
         />
     );
 }

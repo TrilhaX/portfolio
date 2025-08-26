@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #F8F8F8;
   min-height: 100vh;
 }
 
@@ -57,7 +57,7 @@ footer {
   flex-direction: column;
   width: 100%;
   max-height: 3rem;
-  background-color: white;
+  background-color: #F8F8F8;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -95,7 +95,7 @@ header {
   justify-content: center;
   width: 100%;
   left: 0;
-  background-color: white;
+  background-color: #F8F8F8;
 }
 
 nav {
